@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/card.css" />
+    <link rel="stylesheet" href="css/poker.css" />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+      }
+
+    </style>
+  </head>
+
+  <body onresize="resize()">
+    <div id="main">
+      <div id="sidebar">
+        <button id="deal">Deal</button>
+        <button id="test" disabled>Pre-flop</button>
+        <button id="test1">Test</button>
+        <button id="test2" disabled>Show</button>
+        <button id="sim">Simulator</button>
+        <form action="">
+          <label for=""
+            >Result: <input type="checkbox" id="result" checked />
+          </label>
+          <label for=""
+            >Console: <input type="checkbox" id="console" checked />
+          </label>
+          <label for="">Players: <input type="text" id="input" /> </label>
+          <label for=""
+            >Deposite: <input type="text" id="dep" value="10000"
+          /></label>
+          <label for=""
+            >Small: <input type="text" id="small" value="100"
+          /></label>
+        </form>
+        <button id="game">Start Game</button>
+        <br />
+        <button id="fold" disabled>Fold</button>
+        <button id="check" disabled>Check</button>
+        <button id="call" disabled>Call</button>
+        <button id="raise" disabled>Raise</button>
+        <input type="text" disabled id="bid" value="200" />
+      </div>
+      <div id="players"></div>
+      <div>
+        <span id="pot"></span>
+        <div id="ground" class="ground"></div>
+      </div>
+      <div id="config"></div>
+    </div>
+
+    <script src="js/card.js"></script>
+    <script src="js/poker.js"></script>
+  </body>
+</html>

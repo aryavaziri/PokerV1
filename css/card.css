@@ -1,0 +1,137 @@
+.card {
+    font-family: monospace;
+    width: 100%;
+    background-color: rgb(218, 218, 218);
+    border-radius: 1vh;
+    box-shadow: 5px 8px 20px 5px rgba(82, 82, 82, 0.779);
+    position: relative;
+    aspect-ratio: 0.64;
+    margin: 5px;
+    overflow: hidden;
+}
+
+.card>img {
+    height: 100%;
+    width: 100%;
+    transition-delay: 0.1s;
+    opacity: 1;
+}
+
+.card>div {
+    transition-delay: 0.1s;
+    opacity: 0;
+}
+
+.card>div:nth-of-type(1)>span>img {
+    padding-left: 2px;
+}
+
+.card>div:nth-of-type(1)>span {
+    position: absolute;
+    font-weight: bolder;
+    width: 20%;
+    text-align: center;
+    display: block;
+    font-size: 2vw;
+    line-height: 1.2rem;
+    letter-spacing: -3px;
+}
+
+.card>div:nth-of-type(1)>span:nth-of-type(1) {
+    top: 4%;
+    left: 5%;
+}
+
+
+.card>div:nth-of-type(1)>span:nth-of-type(2) {
+    bottom: 4%;
+    right: 5%;
+    transform: rotateZ(180deg);
+}
+
+.card>div:nth-of-type(1)>span>img {
+    width: 100%;
+    background-size: contain;
+}
+
+.card>div:nth-of-type(1)>img {
+    position: absolute;
+    left: 25%;
+    top: 32%;
+    width: 50%;
+}
+
+#test {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#test>div {
+    max-width: 20vw;
+}
+
+#mainn {
+    width: 20vw;
+    margin: 10px auto;
+
+}
+
+#mainn>div {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.hide {
+    animation: 0.2s hide forwards linear;
+}
+
+.show {
+    animation: 0.2s show forwards linear;
+}
+
+.show>div {
+    opacity: 1;
+}
+
+.show>img {
+    opacity: 0;
+}
+.deal{
+    animation: 0.2s deal forwards linear;
+}
+.deal>img{opacity: 1;}
+
+@keyframes deal{
+    from{transform: rotateX(90deg);}
+    to{transform: rotateX(180deg);}
+}
+
+@keyframes hide {
+    0% {
+        transform: rotateX(0deg);
+    }
+
+    100% {
+        transform: rotateX(180deg);
+    }
+}
+
+@keyframes show {
+    0% {
+        transform: rotateX(180deg);
+    }
+
+    100% {
+        transform: rotateX(0deg);
+    }
+}
+
+.hide>img {
+    opacity: 1;
+}
+
+.hide>div {
+    opacity: 0;
+}

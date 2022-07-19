@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="card.css">
+    <style>
+        *{
+            padding: 0;margin: 0;box-sizing: border-box;
+        }
+        #test {
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        #test>div{max-width: 20vw;}
+
+        #mainn {
+            width: 20vw;
+            margin: 10px auto;
+
+        }
+
+        #mainn>div {
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="mainn"></div>
+
+
+    <div id="test" class="cardb"></div>
+
+
+    <script>
+
+        const a = new card(10,0)
+
+
+        function card(num,b) {
+            n1 = ((num - 1) % 13) + 1
+            suit = parseInt((num - 1) / 13)
+            switch (n1) {
+                case 11:
+                    this.n = 'J'
+                    break;
+                case 12:
+                    this.n = 'Q'
+                    break;
+                case 13:
+                    this.n = 'K'
+                    break;
+                case 1:
+                    this.n = 'A'
+                    break;
+                default:
+                    this.n = n1
+                    break;
+            }
+            switch (suit) {
+                case 0:
+                    this.s = 'Spades'
+                    break;
+                case 1:
+                    this.s = 'Hearts'
+                    break;
+                case 2:
+                    this.s = 'Clubs'
+                    break;
+                case 3:
+                    this.s = 'Diamonds'
+                    break;
+            }
+            let el = document.createElement('div')
+            el.classList.add('card')
+            el.innerHTML = "<div><img src='img/" + this.s + ".svg'> <span>" + this.n + "<img src='img/" + this.s + ".svg'></span> <span>" + this.n + "<img src='img/" + this.s + ".svg'></span></div><img src='img/p.webp'></img>"
+            if (suit % 2) { el.style.color = 'red' } else { el.style.color = 'black' }
+            document.querySelectorAll(".cardb")[b].append(el)
+            this.show = function () {
+                el.classList.add('show')
+                el.classList.remove('hide')
+            }
+            this.hide = function(){
+                el.classList.remove('show')
+                el.classList.add('hide')
+            }
+            // this.show()
+            this.hide()
+        }
+
+    </script>
+</body>
+
+</html>

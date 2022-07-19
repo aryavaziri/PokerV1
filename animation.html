@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+
+        #main {
+            margin: 10vh auto;
+            width: 150px;
+            height: 200px;
+            background-color: blue;
+            overflow: hidden;
+            position: relative;
+
+        }
+        #main>img{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;left: 0;
+            overflow: hidden;
+        }
+
+        .a>img {
+            /* animation: arya1 1s ; */
+            height: 0 !important;
+            top: 50% !important;
+            transition: 1s;
+
+        }
+
+        @keyframes arya1 {
+            0% {
+                transform: rotateX(0);
+            }
+            100% {
+                transform: rotateX(180deg);
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <img src="img/p.webp" alt="">
+    </div>
+    <button id="btn">click</button>
+
+    <script>
+        document.getElementById('btn').addEventListener('click', function () {
+            document.getElementById('main').classList.toggle('a')
+        })
+    </script>
+</body>
+
+</html>

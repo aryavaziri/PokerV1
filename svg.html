@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        p {
+            font-family: monospace;
+            background-color: #06004e;
+        }
+    </style>
+</head>
+
+<body>
+
+    <svg width="200" height="200" viewBox="0 0 500 500">
+        <circle id="circle" stroke-width="20%" stroke="#06004e" cx="50%" cy="50%" r="40%" fill="transparent" />
+        <defs>
+            <path fill="gray" d="M25 250 a 225 225 1 1 0 450 0 a 225 225 1 0 0 -450 0" id="txt-path2"></path>
+        </defs>
+        <text style="letter-spacing: 7px" fill="#00e1ffdf" font-size="80" font-family="monospace" font-weight="600">
+            <textPath startOffset="0" xlink:href="#txt-path2">  ------  DEALER  ------  DEALER</textPath>
+        </text>
+    </svg>
+
+</body>
+
+</html>
